@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Header = () => {
+export const Header = () => {
   return <div>Header-Search</div>;
 };
-
-export default Header;

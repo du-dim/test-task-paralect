@@ -6,4 +6,15 @@
   background-color: $blue;
   width: 100%;
   height: $header;
+  align-items: center;  
+  &__logo {
+    margin-left: 41px;    
+    margin-right: 22px;
+    display: flex;
+    height: 40px;  
+    width: 41px;    
+    background: url("../../../public/assets/github.svg");   
+    background-size: cover;
+    cursor: pointer;
+  }
 }

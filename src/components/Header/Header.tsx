@@ -1,5 +1,6 @@
 import React from 'react';
+import './Header.scss';
 
 export const Header = () => {
-  return <div>Header-Search</div>;
+  return <div className='header'>Header-Search</div>;
 };

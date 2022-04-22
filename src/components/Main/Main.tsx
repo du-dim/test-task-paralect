@@ -1,5 +1,6 @@
 import React from 'react';
+import './Main.scss';
 
 export const Main = () => {
-  return <div>Main-User</div>;
+  return <div className='main'>Main-User</div>;
 };

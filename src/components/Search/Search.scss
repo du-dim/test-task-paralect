@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+
+.search {
+  display: flex;
+  background-color: #ffffff;
+  width: 472px;
+  height: 24px;      
+  padding: 8px 14px;
+  margin-right: 20px;
+  border-radius: 6px;   
+  align-items: center;      
+  &__text {     
+    display: block; 
+    font-size: $fp;    
+    padding-left: 6px;
+    height: 100%; 
+    width: 100%;    
+  }  
+  &::before {
+    position: relative; 
+    content: '';   
+    width: 24px;
+    height: 24px; 
+    background: url('../../../public/assets/search.svg');    
+    background-size: cover;
+  } 
+}

@@ -8,11 +8,11 @@
   height: $header;
   align-items: center;  
   &__logo {
-    margin-left: 41px;    
-    margin-right: 22px;
-    display: flex;
+    display: block;
+    margin-left: 41px;  
+    margin-right: 22px;   
     height: 40px;  
-    width: 41px;    
+    min-width: 41px;        
     background: url("../../../public/assets/github.svg");   
     background-size: cover;
     cursor: pointer;

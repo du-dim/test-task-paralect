@@ -1,0 +1,20 @@
+@import '../../style/variables.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: $blue;
+  width: 100%;
+  height: $header;
+  align-items: center;  
+  &__logo {
+    display: block;
+    margin-left: 41px;  
+    margin-right: 22px;   
+    height: 40px;  
+    min-width: 41px;        
+    background: url("../../../public/assets/github.svg");   
+    background-size: cover;
+    cursor: pointer;
+  }
+}

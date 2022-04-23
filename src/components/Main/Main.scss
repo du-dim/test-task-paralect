@@ -1,0 +1,9 @@
+@import '../../style/variables.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+  height: calc(100% - #{$header});
+  background-color: $back;
+}

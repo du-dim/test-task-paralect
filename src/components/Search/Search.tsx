@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './Search.scss';
 
-export const Search = () => {
+type IProps = {
+  setName: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export const Search = ({ setName }: IProps) => {
   const [text, setText] = useState('');
 
   const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -9,7 +13,7 @@ export const Search = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(text);
+    setName(text);
   };
 
   return (

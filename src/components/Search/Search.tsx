@@ -6,19 +6,26 @@ type IProps = {
 };
 
 export const Search = ({ setName }: IProps) => {
-  const [text, setText] = useState('');
+  const [username, setUsername] = useState('');
+  const github_url = `https://api.github.com/users/${username.trim()}/repos`;
 
-  const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
-  };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setName(text);
+    const response = await fetch(github_url);
+    const data = await response.json();
+    if (response.ok) {
+      console.log(data);
+    } else console.log('Something went wrong');
   };
 
   return (
     <form className='search' onSubmit={handleSubmit}>
-      <input type='text' className='search__text' value={text} onChange={handleText} />
+      <input
+        type='text'
+        className='search__text'
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
       <input type='submit' hidden />
     </form>
   );

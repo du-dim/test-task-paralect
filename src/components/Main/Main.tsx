@@ -1,19 +1,25 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAppSelector } from '../../redux/hooks';
 import { Start } from '../Start/Start';
 import { NoUser } from '../NoUser/NoUser';
 import { User } from '../User/User';
 import './Main.scss';
 
 export const Main = () => {
-  return (
-    <div className='main'>
-      <Routes>
-        <Route path='/' element={<Start />} />
-        <Route path='/nouser' element={<NoUser />} />
-        <Route path='/user' element={<User />} />
-        <Route path='/*' element={<Navigate to='/' />} />
-      </Routes>
-    </div>
-  );
+  const status = useAppSelector((state) => state.user.status);
+  const content = () => {
+    switch (status) {
+      case 'start':
+        return <Start />;
+      case 'loading':
+        return <NoUser />;
+      case 'nothing':
+        return <NoUser />;
+      case 'presence':
+        return <User />;
+      default:
+        return <Start />;
+    }
+  };
+  return <div className='main'>{content()}</div>;
 };

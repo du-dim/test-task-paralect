@@ -5,11 +5,7 @@ import { NoUser } from '../NoUser/NoUser';
 import { User } from '../User/User';
 import './Main.scss';
 
-type IProps = {
-  name: string;
-};
-
-export const Main = ({ name }: IProps) => {
+export const Main = () => {
   return (
     <div className='main'>
       <Routes>

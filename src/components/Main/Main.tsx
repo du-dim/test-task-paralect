@@ -3,6 +3,7 @@ import { useAppSelector } from '../../redux/hooks';
 import { Start } from '../Start/Start';
 import { NoUser } from '../NoUser/NoUser';
 import { User } from '../User/User';
+import { Loader } from '../Loader/Loader';
 import './Main.scss';
 
 export const Main = () => {
@@ -12,7 +13,7 @@ export const Main = () => {
       case 'start':
         return <Start />;
       case 'loading':
-        return <NoUser />;
+        return <Loader />;
       case 'nothing':
         return <NoUser />;
       case 'presence':

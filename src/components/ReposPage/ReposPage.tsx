@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import { Loader } from '../Loader/Loader';
 import { NoRepos } from '../NoRepos/NoRepos';
+import { ReposList } from '../ReposList/ReposList';
 import './ReposPage.scss';
 
 export const ReposPage = () => {
@@ -14,11 +15,11 @@ export const ReposPage = () => {
       case 'nothing':
         return <NoRepos />;
       case 'presence':
-        return 'presence';
+        return <ReposList />;
       default:
         return;
     }
   };
 
-  return <div className='repos'>{pageRepos()}</div>;
+  return <div className='repospage'>{pageRepos()}</div>;
 };

@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+
+.repository {
+  display: flex;
+  flex-direction: column; 
+  background-color: $front;
+  width: calc(100% - 64px);
+  padding: 24px 32px;
+  border-radius: 6px;  
+  gap: 16px;
+  justify-content: space-between;
+  &__name {
+    font-size: $fh2;
+    line-height: 29px;
+    font-weight: 500;
+    color: $blue;  
+  }
+  &__description {
+    font-size: $fp;
+    min-height: 19px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $black;
+  }
+}

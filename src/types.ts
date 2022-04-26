@@ -20,6 +20,12 @@ export interface IDataRepos {
   description: string | null;
 }
 
+export interface IPropsRepos {
+  key: number;
+  name: string;
+  description: string;
+}
+
 export interface IReposState {
   dataRepos: IDataRepos[] | null;
   statusRepos: 'loading' | 'presence' | 'nothing';

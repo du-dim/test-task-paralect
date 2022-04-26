@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import { Loader } from '../Loader/Loader';
+import { NoRepos } from '../NoRepos/NoRepos';
 import './Repos.scss';
 
 export const Repos = () => {
@@ -11,7 +12,7 @@ export const Repos = () => {
       case 'loading':
         return <Loader />;
       case 'nothing':
-        return 'nothing';
+        return <NoRepos />;
       case 'presence':
         return 'presence';
       default:

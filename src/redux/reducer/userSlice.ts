@@ -18,7 +18,6 @@ export const userSlice = createSlice({
     bulder.addCase(userFetch.fulfilled, (state, action) => {
       state.dataUser = action.payload;
       state.status = 'presence';
-      console.log(state.dataUser);
     });
     bulder.addCase(userFetch.rejected, (state) => {
       state.dataUser = null;

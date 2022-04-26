@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { start, userFetch } from '../../redux/reducer/userSlice';
+import { reposFetch } from '../../redux/reducer/reposSlice';
 import './Search.scss';
 
 export const Search = () => {
@@ -11,6 +12,7 @@ export const Search = () => {
     e.preventDefault();
     if (username.trim()) {
       dispatch(userFetch(username.toLocaleLowerCase().trim()));
+      dispatch(reposFetch(username.toLocaleLowerCase().trim()));
     } else dispatch(start());
   };
 

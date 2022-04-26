@@ -14,8 +14,13 @@ export interface IUserState {
   status: 'start' | 'loading' | 'presence' | 'nothing';
 }
 
-export interface IRepos {
+export interface IDataRepos {
   id: number;
   name: string;
   description: string | null;
+}
+
+export interface IReposState {
+  dataRepos: IDataRepos[] | null;
+  statusRepos: 'loading' | 'presence' | 'nothing';
 }

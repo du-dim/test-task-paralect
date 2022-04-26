@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { start, userFetch } from '../../redux/reducer/userSlice';
-import { reposFetch } from '../../redux/reducer/reposSlice';
+import { start } from '../../redux/reducer/userSlice';
+import { reposFetch } from '../../redux/thunk/fetchRepos';
+import { userFetch } from '../../redux/thunk/fetchUser';
 import './Search.scss';
 
 export const Search = () => {

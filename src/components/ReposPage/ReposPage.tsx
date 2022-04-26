@@ -2,9 +2,9 @@ import React from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import { Loader } from '../Loader/Loader';
 import { NoRepos } from '../NoRepos/NoRepos';
-import './Repos.scss';
+import './ReposPage.scss';
 
-export const Repos = () => {
+export const ReposPage = () => {
   const status = useAppSelector((state) => state.repos.statusRepos);
 
   const pageRepos = () => {

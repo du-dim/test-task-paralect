@@ -30,3 +30,9 @@ export interface IReposState {
   dataRepos: IDataRepos[] | null;
   statusRepos: 'loading' | 'presence' | 'nothing';
 }
+
+export interface IPaginateState {
+  amountItems: number;
+  amountPages: number;
+  activePage: number;
+}

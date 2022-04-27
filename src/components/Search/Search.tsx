@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { start } from '../../redux/reducer/userSlice';
+import { active } from '../../redux/reducer/paginateSlice';
 import { reposFetch } from '../../redux/thunk/fetchRepos';
 import { userFetch } from '../../redux/thunk/fetchUser';
 import './Search.scss';
@@ -12,6 +13,7 @@ export const Search = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username.trim()) {
+      dispatch(active(1));
       dispatch(userFetch(username.toLocaleLowerCase().trim()));
       dispatch(reposFetch(username.toLocaleLowerCase().trim()));
     } else dispatch(start());

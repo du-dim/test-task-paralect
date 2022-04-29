@@ -12,3 +12,15 @@
     gap: 24px;
   }  
 }
+
+@media (max-width: 1024px) {
+  .reposlist__list {    
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reposlist__list {    
+    gap: 16px;
+  }
+}

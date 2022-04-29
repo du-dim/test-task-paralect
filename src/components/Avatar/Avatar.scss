@@ -9,3 +9,30 @@
     border-radius: 50%;
   }
 }
+
+@media (max-width: 1024px) {
+  .avatar-img {    
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .avatar {    
+    margin-top: 20px;
+    &-img {      
+      width: 140px;
+      height: 140px;     
+    }
+  }
+}
+
+@media (max-width: 486px) {
+  .avatar {    
+    align-self: center;    
+    &-img {      
+      width: 280px;
+      height: 280px;     
+    }
+  }
+}

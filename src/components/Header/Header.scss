@@ -18,3 +18,9 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 486px) {
+  .header__logo {
+    margin-left: 22px;   
+  }
+}

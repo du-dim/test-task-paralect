@@ -6,7 +6,6 @@
   width: 472px;
   height: 24px;      
   padding: 8px 14px;
-  margin-right: 20px;
   border-radius: 6px;   
   align-items: center;      
   &__text {     
@@ -24,4 +23,18 @@
     background: url('../../../public/assets/search.svg');    
     background-size: cover;
   } 
+}
+
+@media (max-width: 640px) {
+  .search {
+    width: calc(100% - 160px);
+    margin-right: 0px;   
+  }
+}
+
+@media (max-width: 486px) {
+  .search {
+    width: calc(100% - 140px);
+    margin-right: 0px;   
+  }
 }

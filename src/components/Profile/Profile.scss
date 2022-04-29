@@ -6,3 +6,26 @@
   height: 100%;
   width: 292px;   
 }
+
+@media (max-width: 1024px) {
+  .profile {    
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {    
+    flex-direction: row;
+    gap: 30px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 486px) {
+  .profile {    
+    flex-direction: column; 
+    height: max-content; 
+    width: 100%;  
+  }
+}

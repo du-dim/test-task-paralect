@@ -25,3 +25,16 @@
     color: $black;
   }
 }
+
+@media (max-width: 1024px) {
+  .repository {    
+    padding: 20px 28px;   
+    width: calc(100% - 56px); 
+  }
+}
+@media (max-width: 768px) {
+  .repository {    
+    padding: 20px 20px;
+    width: calc(100% - 40px);
+  }
+}

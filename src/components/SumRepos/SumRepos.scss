@@ -9,3 +9,17 @@
   letter-spacing: 1px;
   font-weight: 600;
 }  
+
+@media (max-width: 1024px) {
+  .sum-repos {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 14px;  
+  }
+}
+
+@media (max-width: 486px) {
+  .sum-repos {
+    font-size: 28px;  
+  }
+}

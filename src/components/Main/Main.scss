@@ -10,3 +10,19 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .main {
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;  
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+}

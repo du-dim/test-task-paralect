@@ -12,16 +12,18 @@
     display: flex;
     flex-direction: row;
     width: max-content;
+    height: 24px;    
     font-size: $fp;
     font-weight: 400; 
-    line-height: 24px;
-    letter-spacing: 0.5px;
+    line-height: 24px;    
+    letter-spacing: 0.5px;    
     &::before {
       display: block;
       position: relative;
+      top: -1px;
       width: 24px;
       height: 24px;
-      margin-right: 8px;
+      margin-right: 8px;  
       content: '';        
       background-size: cover;
       background: url('../../../public/assets/shared.svg');                
@@ -29,5 +31,18 @@
   }
   &__following::before {
     background: url('../../../public/assets/private.svg'); 
+  }
+}
+
+@media (max-width: 1024px) {
+  .follow-amount {    
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 355px) {
+  .follow-amount {    
+    flex-direction: column;
+    gap: 0px;
   }
 }

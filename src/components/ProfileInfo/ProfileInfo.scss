@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+
+.profile-info {
+  display: flex;
+  flex-direction: column;   
+  height: 100%;
+  width: 25%;    
+  &__name {
+    margin-top: 28px;
+    font-size: $fname;
+    font-weight: 600;
+    line-height: 130%;
+    color: $black;    
+    width: max-content;
+  }
+  &__login {
+    margin-top: 12px;
+    width: max-content;
+    font-size: $flogin;
+    font-weight: 400;
+    line-height: 22px;
+    color: $blue;
+    text-decoration: none; 
+  }  
+}

@@ -6,6 +6,8 @@
   &__list {
     display: flex;
     flex-direction: column;
+    min-height: max-content;
+    justify-content: space-between;  
     width: 100%;
     gap: 24px;
   }  

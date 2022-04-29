@@ -7,7 +7,6 @@
   font-size: $fs;
   font-weight: 400;
   line-height: 21px;
-
   &__left,
   &__right {
     display: flex;
@@ -15,9 +14,25 @@
     height: 24px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer;   
+    &_arrow {
+      width: 18px;
+      height: 18px;     
+    }
   }
-
+  &__left_arrow {
+    background: url("../../../public/assets/arrow-left.svg");
+    &:hover {
+      background: url("../../../public/assets/arrow-left-blue.svg");
+    }
+  }
+  &__right_arrow {
+    background: url("../../../public/assets/arrow-right.svg");
+    &:hover {
+      background: url("../../../public/assets/arrow-right-blue.svg");
+    }
+  }
+  
   &__numbers {
     display: flex;
     flex-direction: row;

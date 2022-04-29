@@ -1,0 +1,11 @@
+.avatar {
+  width: fit-content;
+  margin-top: 40px;    
+  &-img {
+    display:block;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

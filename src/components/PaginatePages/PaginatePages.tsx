@@ -37,7 +37,7 @@ export const PaginatePages = () => {
         className='paginate__left'
         onClick={() => (activePage > 1 ? handlePage(activePage - 1) : false)}
       >
-        <img src='./assets/arrow-left.svg' alt='left' />
+        <div className='paginate__left_arrow'></div>
       </div>
       <div className='paginate__numbers'>
         <div className={`cursor ${activePage === 1 ? 'active' : ''}`} onClick={() => handlePage(1)}>
@@ -59,7 +59,7 @@ export const PaginatePages = () => {
         className='paginate__right'
         onClick={() => (activePage < amountPages ? handlePage(activePage + 1) : false)}
       >
-        <img src='./assets/arrow-right.svg' alt='right' />
+        <div className='paginate__right_arrow'></div>
       </div>
     </div>
   );

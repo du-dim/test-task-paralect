@@ -23,6 +23,7 @@ export const Search = () => {
         type='text'
         className='search__text'
         value={username}
+        placeholder='Enter GitHub username'
         onChange={(e) => setUsername(e.target.value)}
       />
       <input type='submit' hidden />

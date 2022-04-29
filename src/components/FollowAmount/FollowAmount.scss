@@ -1,0 +1,33 @@
+@import '../../style/variables.scss';
+
+.follow-amount {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px; 
+  width: fit-content;
+  height: fit-content;  
+  gap: 16px;    
+  &__follower,
+  &__following {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    font-size: $fp;
+    font-weight: 400; 
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    &::before {
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      content: '';        
+      background-size: cover;
+      background: url('../../../public/assets/shared.svg');                
+    }  
+  }
+  &__following::before {
+    background: url('../../../public/assets/private.svg'); 
+  }
+}

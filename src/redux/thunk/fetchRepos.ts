@@ -1,11 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { IDataRepos } from '../../types';
+import { IDataRepos, IFetchReposState } from '../../types';
 
 export const reposFetch = createAsyncThunk(
   'repos/reposFetch',
-  async function (username: string, { rejectWithValue }) {
+  async function (propsFetchRepos: IFetchReposState, { rejectWithValue }) {
     try {
-      const response = await fetch(`https://api.github.com/users/${username}/repos`);
+      const response = await fetch(
+        `${propsFetchRepos.repos_url}?per_page=${propsFetchRepos.items}&page=${propsFetchRepos.activePage}`
+      );
+      console.log(propsFetchRepos);
       if (response.ok) {
         const data = await response.json();
         const dataRepos: IDataRepos[] = data.map((d: IDataRepos) => {

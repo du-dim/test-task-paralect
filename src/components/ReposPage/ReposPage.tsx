@@ -7,7 +7,6 @@ import './ReposPage.scss';
 
 export const ReposPage = () => {
   const status = useAppSelector((state) => state.repos.statusRepos);
-
   const pageRepos = () => {
     switch (status) {
       case 'loading':

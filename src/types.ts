@@ -36,3 +36,9 @@ export interface IPaginateState {
   amountPages: number;
   activePage: number;
 }
+
+export interface IFetchReposState {
+  repos_url: string;
+  items: number;
+  activePage: number;
+}

@@ -1,22 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../redux/hooks';
 import { active, amount } from '../../redux/reducer/paginateSlice';
+import { reposFetch } from '../../redux/thunk/fetchRepos';
 import './Paginator.scss';
 
 export const Paginator = () => {
   const dispatch = useDispatch();
+  const repos_url = useAppSelector((state) => state.user.dataUser?.repos_url) as string;
+  const items = useAppSelector((state) => state.paginate.amountItems);
   const public_repos = useAppSelector((state) => state.user.dataUser?.public_repos) as number;
   const activePage = useAppSelector((state) => state.paginate.activePage);
   const amountPages = useAppSelector((state) => state.paginate.amountPages);
-  const items = useAppSelector((state) => state.paginate.amountItems);
   const start = (activePage - 1) * items + 1;
   const end = activePage * items;
 
-  useEffect(() => {
-    dispatch(amount(public_repos));
-  }, [public_repos]);
-
+  dispatch(amount(public_repos));
   const pages =
     amountPages > 2
       ? Array(amountPages - 2)
@@ -37,7 +36,13 @@ export const Paginator = () => {
   });
 
   const handlePage = (page: number) => {
+    const propsFetchRepos = {
+      repos_url: repos_url,
+      items: items,
+      activePage: page,
+    };
     dispatch(active(page));
+    dispatch(reposFetch(propsFetchRepos));
   };
 
   return (

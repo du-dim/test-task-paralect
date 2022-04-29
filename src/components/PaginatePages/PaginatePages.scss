@@ -1,0 +1,50 @@
+@import '../../style/variables.scss';
+
+.paginate {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: $fs;
+  font-weight: 400;
+  line-height: 21px;
+
+  &__left,
+  &__right {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__numbers {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 9px;
+    justify-content: space-between;
+
+    &>div {
+      text-align: center;
+      height: 24px;
+      line-height: 24px;
+      width: 21px;
+      color: $gray;      
+    }
+
+    .active {
+      background-color: $blue;
+      border-radius: 3px;
+      color: $front;
+    }
+
+    .invisible {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import { Paginator } from '../Paginator/Paginator';
 import { Repository } from '../Repository/Repository';
+import { SumRepos } from '../SumRepos/SumRepos';
 import './ReposList.scss';
 
 export const ReposList = () => {
@@ -14,7 +15,7 @@ export const ReposList = () => {
 
   return (
     <div className='reposlist'>
-      <h1 className='reposlist__amount'>Repositories ({public_repos})</h1>
+      <SumRepos />
       <div className='reposlist__list'>{list}</div>
       {public_repos > items ? <Paginator /> : <></>}
     </div>

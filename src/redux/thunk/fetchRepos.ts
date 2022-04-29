@@ -8,7 +8,6 @@ export const reposFetch = createAsyncThunk(
       const response = await fetch(
         `${propsFetchRepos.repos_url}?per_page=${propsFetchRepos.items}&page=${propsFetchRepos.activePage}`
       );
-      console.log(propsFetchRepos);
       if (response.ok) {
         const data = await response.json();
         const dataRepos: IDataRepos[] = data.map((d: IDataRepos) => {

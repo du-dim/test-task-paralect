@@ -1,64 +1,8 @@
-@import '../../style/variables.scss';
-
-.paginate {
+.paginator {
   display: flex;
   flex-direction: row;
   width: fit-content;
   height: fit-content;
   margin-top: 16px;
-  gap: 16px;
-
-  &__items {
-    display: flex;
-    font-size: $fs;
-    font-weight: 400;
-    height: 24px;
-    line-height: 24px;
-    color: $gray;  
-  }
-
-  &__pages {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    font-size: $fs;
-    font-weight: 400;
-    line-height: 21px;
-
-    &_left,
-    &_right {
-      display: flex;
-      width: 24px;
-      height: 24px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    &_numbers {
-      display: flex;
-      flex-direction: row;
-      width: fit-content;
-      gap: 9px;
-      justify-content: space-between;
-
-      &>div {
-        text-align: center;
-        height: 24px;
-        line-height: 24px;
-        width: 21px;
-        color: $gray;
-        cursor: pointer;
-      }
-
-      .active {
-        background-color: $blue;
-        color: $front;
-      }
-
-      .inactive {
-        display: none;
-      }
-    }
-  }
+  gap: 16px;  
 }

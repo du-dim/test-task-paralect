@@ -1,0 +1,10 @@
+@import '../../style/variables.scss';
+
+.paginate-items {
+  display: flex;
+  font-size: $fs;
+  font-weight: 400;
+  height: 24px;
+  line-height: 24px;
+  color: $gray;  
+}

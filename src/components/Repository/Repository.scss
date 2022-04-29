@@ -10,9 +10,11 @@
   gap: 16px;
   justify-content: space-between;
   &__name {
+    display: block;
     font-size: $fh2;
     line-height: 29px;
     font-weight: 500;
+    text-decoration: none;
     color: $blue;  
   }
   &__description {
